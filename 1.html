@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Образователна платформа – Разработка на софтуер</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #222;
+    }
+
+    header {
+      background-color: rgba(55, 47, 141, 0.9);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #261e63;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      display: block;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav li:hover ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #3b328a;
+    }
+
+    nav ul ul li {
+      width: 200px;
+    }
+
+    section {
+      padding: 2rem;
+      margin: 1rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2, h3 {
+      color: #1a237e;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      background-color: #372f8d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Лого" class="logo">
+    <h1>Портал за кодиране и програмиране по Разработка на софтуер</h1>
+    <p>Образователна платформа за 11. клас</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Начало</a></li>
+      <li><a href="#">Учебни материали</a>
+        <ul>
+          <li><a href="#">Теория</a></li>
+          <li><a href="#">Видео уроци</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Практически задачи</a>
+        <ul>
+          <li><a href="#">Проекти</a></li>
+          <li><a href="#">Кодове</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Образователна платформа за 11. клас – Разработка на софтуер</h2>
+    <p>Научи програмиране по системно програмиране с лесни уроци, примери и задачи!</p>
+  </section>
+
+  <section>
+    <h2>Какво е Разработка на софтуер?</h2>
+    <p>Този предмет е въведение в принципите на софтуерната разработка, обхващащ трислойния модел, тестване, рефакториране, работа с пакетни мениджъри, бази данни и потребителски интерфейс. Учениците ще могат да използват Windows Forms за създаване на потребителски интерфейси. Сами ще разработват и структурират софтуерни проекти. Ще рефакторират код за по-добра четимост и ефективност. Ще пишат и изпълняват тестове за своите приложения.</p>
+  </section>
+
+  <section>
+    <h2>Галерия</h2>
+    <div class="gallery">
+      <img src="img1.jpg" alt="Работа в час">
+      <img src="img2.jpg" alt="Ученици програмират">
+      <img src="img3.jpg" alt="Проект на ученик">
+    </div>
+  </section>
+
+  <section>
+    <h2>Какво ще научиш?</h2>
+    <ul>
+      <li>Трислойния модел</li>
+      <li>Рефакториране на код</li>
+      <li>Пакетни мениджъри</li>
+      <li>Свързване на приложение с бази данни</li>
+      <li>Създаване на потребителски интерфейс</li>
+      <li>Дизайн и интерфейс на приложение</li>
+      <li>Писане на компонентни тестове</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>За мен</h2>
+    <img src="teacher.jpg" alt="Илияна Гюрова" width="200" style="border-radius: 10px;">
+    <p>Здравейте, Казвам се Илияна Гюрова и съм действащ учител вече година и половина. Преподавам специални предмети по професия „Системен програмист“ на 11. и 12. клас в СУ „Ал. Иванов – Чапай“...</p>
+  </section>
+
+  <section>
+    <h2>Първият ми открит урок</h2>
+    <div class="gallery">
+      <img src="lesson1.jpg" alt="Открит урок 1">
+      <img src="lesson2.jpg" alt="Открит урок 2">
+    </div>
+  </section>
+
+  <section>
+    <h2>Училището</h2>
+    <img src="school.jpg" alt="СУ Ал. Иванов – Чапай" width="300">
+    <p>Патрон: Александър Иванов – Чапай</p>
+    <video width="320" height="240" controls>
+      <source src="school-video.mp4" type="video/mp4">
+      Вашият браузър не поддържа видеото.
+    </video>
+  </section>
+
+  <section>
+    <h2>Проекти на ученици</h2>
+    <div class="gallery">
+      <img src="project1.jpg" alt="Проект 1">
+      <img src="project2.jpg" alt="Проект 2">
+    </div>
+  </section>
+
+  <section>
+    <h2>Прочети моята книга тук:</h2>
+    <a href="my-book.pdf" target="_blank">Изтегли книгата (PDF)</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Илияна Гюрова – Всички права запазени</p>
+  </footer>
+</body>
+</html>
