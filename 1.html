@@ -64,8 +64,8 @@
     }
 
     section {
-      padding: 2rem;
-      margin: 1rem;
+      padding: 3rem;
+      margin: 2.5rem;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -77,6 +77,10 @@
 	h1{
 	color: white;
 	}
+	
+	h2{
+	font-size:33px;
+	}
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -86,6 +90,7 @@
 
     .gallery img {
       width: 300px;
+	  height: 260px;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
@@ -102,14 +107,18 @@
       position: absolute;
       top: 10px;
       left: 10px;
-      width: 180px;
+      width: 120px;
     }
+	
+	.snimka{
+	width: 29%;
+	}
   </style>
 </head>
 <body>
   <header>
     <img src="img/12.png" alt="Лого" class="logo">
-    <h1>Портал за кодиране и програмиране по Разработка на софтуер</h1>
+    <h1>Портал за кодиране и програмиране по Разработка на софт-уер</h1>
     <p>Образователна платформа за 11. клас</p>
   </header>
 
@@ -131,27 +140,29 @@
     </ul>
   </nav>
 
-  <section>
-    <h2>Образователна платформа за 11. клас – Разработка на софтуер</h2>
-    <p>Научи програмиране по системно програмиране с лесни уроци, примери и задачи!</p>
+ <section>
+   <center> <h2>Образователна платформа за 11. клас – Разработка на софтуер</h2></center>
+   <center> <p>Научи програмиране по системно програмиране с лесни уроци, примери и задачи!</p></center>
+ <center> <img src="img/robo.webp"  class="snimka"> </center>
   </section>
 
   <section>
-    <h2>Какво е Разработка на софтуер?</h2>
+   <center> <h2>Какво е Разработка на софтуер?</h2> </center>
     <p>Този предмет е въведение в принципите на софтуерната разработка, обхващащ трислойния модел, тестване, рефакториране, работа с пакетни мениджъри, бази данни и потребителски интерфейс. Учениците ще могат да използват Windows Forms за създаване на потребителски интерфейси. Сами ще разработват и структурират софтуерни проекти. Ще рефакторират код за по-добра четимост и ефективност. Ще пишат и изпълняват тестове за своите приложения.</p>
   </section>
 
   <section>
-    <h2>Галерия</h2>
+   <center> <h2>Галерия</h2> </center>
     <div class="gallery">
-      <img src="img1.jpg" alt="Работа в час">
-      <img src="img2.jpg" alt="Ученици програмират">
-      <img src="img3.jpg" alt="Проект на ученик">
+      <img src="img/11.jpg" alt="Работа в час">
+      <img src="img/111.jpg" alt="Ученици програмират">
+      <img src="img/1111.jpg" alt="Проект на ученик">
+	  <img src="img/1111.jpg" alt="Проект на ученик">
     </div>
   </section>
 
   <section>
-    <h2>Какво ще научиш?</h2>
+   <center> <h2>Какво ще научиш?</h2> </center>
     <ul>
       <li>Трислойния модел</li>
       <li>Рефакториране на код</li>
@@ -161,47 +172,49 @@
       <li>Дизайн и интерфейс на приложение</li>
       <li>Писане на компонентни тестове</li>
     </ul>
+  </section> 
+
+  <section>
+   <center> <h2>За мен</h2> </center>
+    <img src="img/.jpg" alt="Илияна Гюрова" width="200" style="border-radius: 10px;">
+    <p>Здравейте, Казвам се Илияна Гюрова и съм действащ учител вече година и половина. Преподавам специални предмети по професия „Системен програмист“ на 11. и 12. клас в СУ „Ал. Иванов – Чапай“. <br> Никога не съм вярвала, че професията „учител“ може да бъде една от най-трудните, но с времето разбрах, че тя е и една от най-ценните. Преодолях много предизвикателства, откакто станах учител, но научих едно – децата са най-голямото богатство. Всеки ден те ме вдъхновяват, изненадват и мотивират да давам най-доброто от себе си. <br> Освен преподаването, водя и свой клуб „Занимания по интереси“, в който учениците не само програмират, но и работят със вградени системи, сглобяват автоматизирани колички и развиват умения, които ще им помогнат в бъдещата им кариера.<br> За мен преподаването не е просто работа – това е кауза, която изгражда бъдещето!</p>
   </section>
 
   <section>
-    <h2>За мен</h2>
-    <img src="teacher.jpg" alt="Илияна Гюрова" width="200" style="border-radius: 10px;">
-    <p>Здравейте, Казвам се Илияна Гюрова и съм действащ учител вече година и половина. Преподавам специални предмети по професия „Системен програмист“ на 11. и 12. клас в СУ „Ал. Иванов – Чапай“...</p>
-  </section>
-
-  <section>
-    <h2>Първият ми открит урок</h2>
+  <center>  <h2>Първият ми открит урок</h2> </center>
+  <center><p> На тема: Реализиране на фронт-енд за уеб сайт с 12.клас</p> </center>
     <div class="gallery">
-      <img src="lesson1.jpg" alt="Открит урок 1">
-      <img src="lesson2.jpg" alt="Открит урок 2">
+      <img src="img/ot2.jpg" alt="Открит урок 1">
+      <img src="img/ot1.jpg" alt="Открит урок 2">
+	  <img src="img/ot3.jpg" alt="Открит урок 3">
+	  <img src="img/ot4.jpg" alt="Открит урок 4">
     </div>
   </section>
 
-  <section>
-    <h2>Училището</h2>
-    <img src="school.jpg" alt="СУ Ал. Иванов – Чапай" width="300">
+  <center><section>
+    <h2>СУ "Александър Иванов-Чапай"</h2>
+    <img src="img/su.jpg" alt="СУ Ал. Иванов – Чапай" width="300">
     <p>Патрон: Александър Иванов – Чапай</p>
-    <video width="320" height="240" controls>
-      <source src="school-video.mp4" type="video/mp4">
-      Вашият браузър не поддържа видеото.
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4SMydw38q7Q?si=uvN28GthqO0Jm9N8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      
     </video>
-  </section>
+  </section> </center>
 
-  <section>
+ <center> <section>
     <h2>Проекти на ученици</h2>
     <div class="gallery">
       <img src="project1.jpg" alt="Проект 1">
       <img src="project2.jpg" alt="Проект 2">
     </div>
-  </section>
+  </section> </center>
 
   <section>
     <h2>Прочети моята книга тук:</h2>
-    <a href="my-book.pdf" target="_blank">Изтегли книгата (PDF)</a>
+    <a href="https://read.bookcreator.com/cJlZz8WhXGguYhNy0mLBIdQmXyC2/CegcZiQ2TJOM3zUc_nATHg" target="_blank">Изтегли книгата (PDF)</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Илияна Гюрова – Всички права запазени</p>
+    Автор: Илияна Гюрова </p>
   </footer>
 </body>
 </html>
