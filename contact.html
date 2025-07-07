@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакт – Илияна Гюрова</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://static.vecteezy.com/system/resources/previews/003/497/193/non_2x/internet-cyber-security-connection-concept-background-free-vector.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgba(55, 47, 141, 0.9);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.6);
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #1a237e;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    input:focus, textarea:focus {
+      border-color: #372f8d;
+      outline: none;
+    }
+
+    button {
+      background-color: #372f8d;
+      color: white;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #261e63;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      background-color: #261e63;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    a.back-link {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+      color: #1a237e;
+      text-decoration: none;
+    }
+	
+	nav {
+      display: flex;
+      justify-content: center;
+      background-color: #261e63;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      display: block;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    nav li:hover ul {
+      display: block;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #3b328a;
+    }
+    nav ul ul li {
+      width: 180px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Свържи се с мен</h1>
+  
+  </header>
+
+<nav>
+    <ul>
+      <li><a href="1.html">Начало</a></li>
+      <li><a href="UMateriali.html">Учебни материали</a>
+        <ul>
+          <li><a href="kontrolni.html">Контролни</a></li>
+        </ul>
+      </li>
+      <li><a href="Pzadachi.html">Практически задачи</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+  </nav>
+
+
+  <section>
+    <h2>Форма за контакт</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+	
+	<!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="48e407df-ffdf-4353-ac99-abd8d4b07fe0">
+
+      <label for="name">Име:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Имейл:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Съобщение:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Изпрати съобщение</button>
+    </form>
+	
+	<h2 style="margin-top: 3rem;">Къде да ме откриеш?</h2>
+  
+   
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2954.992452571928!2d24.013799911326284!3d42.21460594415906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ab5bb0866929a7%3A0x4f0db0ed0212fed9!2z0KHQntCjICLQkNC70LXQutGB0LDQvdC00YrRgCDQn9C40L_QvtC90LrQvtCyLSDQp9Cw0L_QsNC5Ig!5e0!3m2!1sbg!2sbg!4v1750583099030!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <a href="1.html" class="back-link">⬅ Обратно към началната страница</a>
+  </section>
+
+  <footer style="background-color:#261e63; color:white; padding:2rem; text-align:center;">
+  <p><strong>Автор:</strong> Илияна Гюрова – преподавател по Разработка на софтуер</p>
+ <br> <p>Свържи се с мен: <a href="mailto:iliyana@example.com" style="color:#ffd700;">ilianagyurova29@gmail.com</a></p>
+  
+ 
+
+</footer>
+
+</body>
+</html>

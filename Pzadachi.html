@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Практически задачи</title>
+  <style>
+   body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-image: url("img/img111.jpg");
+    }
+
+   header {
+      background-color: rgba(55, 47, 141, 0.9);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .task {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+
+    .task h3 {
+      margin-top: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color:  #bb8fce ;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #217dbb;
+    }
+
+    /* Модал */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      width: 60%;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: red;
+    }
+	
+	
+	nav {
+      display: flex;
+      justify-content: center;
+      background-color: #261e63;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      display: block;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    nav li:hover ul {
+      display: block;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #3b328a;
+    }
+    nav ul ul li {
+      width: 180px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Практически задачи – Visual Studio</h1>
+</header>
+
+<nav>
+    <ul>
+      <li><a href="1.html">Начало</a></li>
+      <li><a href="UMateriali.html">Учебни материали</a>
+        <ul>
+          <li><a href="kontrolni.html">Контролни</a></li>
+        </ul>
+      </li>
+      <li><a href="Pzadachi.html">Практически задачи</a></li>
+      <li><a href="contact.html">Контакти</a></li>
+    </ul>
+  </nav>
+
+
+
+<section>
+  <h2>Списък със задачи</h2>
+
+  <!-- Задача 1 -->
+  <div class="task">
+    <h3>Задача 1: Създай приложение „Calculator“</h3>
+    <p>Създай приложение „Calculator“, което да събира, изважда, умножава, дели целочислено и дели с остатък две цели числа.</p>
+    <a href="files/calculator.docx" class="btn" download>⬇ Изтегли задание</a>
+    <button class="btn" onclick="showDescription(`Пояснение:
+Числата ще бъдат въвеждани от потребителя в текстови кутии textBox1 и textBox2.
+Изборът на операция ще става с натискане на един от бутоните:
+
+    button1, надписан с „+“
+
+    button2, надписан с „–“
+
+    button3, надписан с „*“
+
+    button4, надписан с „/“
+
+    button5, надписан с „%“
+
+Програмата трябва да изведе в етикета label1 сбора, разликата, произведението, частното или остатъка от делението на числата, според натиснатия бутон.
+
+С бутона button6, надписан с „Изчисти“, потребителят ще изчиства съдържанието на двете кутии и етикета, когато пожелае.
+Приложението трябва да съдържа и бутон Изход за затваряне на формата.`)">🔍 Виж описание</button>
+  </div>
+
+  <!-- Задача 2 -->
+  <div class="task">
+    <h3>Задача 2: Дигитален часовник</h3>
+    <p>Създайте десктоп приложение тип „Дигитален часовник“, като използвате Windows Forms.</p>
+    <a href="files/chasovnik.docx" class="btn" download>⬇ Изтегли задание</a>
+    <button class="btn" onclick="showDescription(`Създайте десктоп приложение тип „Дигитален часовник“, като използвате Windows Forms и посочените по-долу контролери. Формата трябва да показва текущото време в реално време. Използвайте следните контроли:
+
+    4 x Label – за изписване на часове, минути, секунди и надпис/заглавие
+
+    1 x Timer – за обновяване на часовника всяка секунда
+	Преименувайте всички контроли със смислени имена:
+Примери: lblHours, lblMinutes, lblSeconds, lblTitle, tmClock
+
+Сменете текстовете на етикетите (ако е необходимо).
+
+Настройте цвят, шрифт и размер на всеки Label:
+
+    Шрифт: голям и четим (например Arial, 20–30 pt)
+
+    Цвят: ярък (например бял, зелен или син)
+
+Настройте таймера tmClock да се изпълнява на всеки 1000 милисекунди (1 секунда).
+
+В таймера добавете събитие, което:
+
+    обновява етикетите с текущия час, минута и секунда
+
+    използва DateTime.Now`)">🔍 Виж описание</button>
+  </div>
+
+<!-- Задача 3 -->
+  <div class="task">
+    <h3>Задача 3: Аларма</h3>
+    <p>Създайте приложение Alarm Clock APP, като използвате Windows Forms.</p>
+    <a href="files/alarma.docx" class="btn" download>⬇ Изтегли задание</a>
+	 <button class="btn" onclick="showDescription(`Свалете предварително снимка на часовник и алармен звук по ваш избор с формат мп3.
+
+Контролери: label-9;  comboBox – 2; button -1; pictureBox -1; WindowsMediaPlayer – 1; Timer -1;
+Сменете името на формата и нейния цвят.  Уголемете заглавието и останалите labels, подредете компонентите както на снимката по-горе! На компонент windows media player, сменете свойство visible на  false.
+`)">🔍 Виж описание</button>
+</div>
+
+
+
+  <h2>🎮 Образователни игри</h2>
+
+  <div class="task" style="background-image: url('https://cdn.wallpapersafari.com/45/87/MZYxXV.jpg');">
+    <h3>Kahoot</h3>
+    <p>Тестова игра за основни понятия по Разработка на софтуер.</p>
+    <a href="https://create.kahoot.it/details/854b7165-8009-4461-a883-a6e908b649bc" target="_blank" class="btn">▶ Играй в Kahoot</a>
+  </div>
+
+  <div class="task" style="background-image: url('https://i0.wp.com/www.rauldiego.es/wp-content/uploads/2021/12/Conoce-Educaplay.png?resize=1080%2C628&ssl=1');">
+    <h3>Eduplay</h3>
+   <p>Бърз и забавен въпросник.</p>
+    <a href="https://www.educaplay.com/learning-resources/24321946-learning_resource.html" target="_blank" class="btn">▶ Играй в Eduplay</a>
+  </div>
+
+  <div class="task" style="background-image: url('https://blooketcodes.com/wp-content/uploads/2023/03/blooket-game-id-300x213.jpg');">
+    <h3>Blooket </h3>
+    <p>Бърз и забавен въпросник с концепции от програмирането.</p>
+    <a href="https://dashboard.blooket.com/set/6855469bb052f5874cc1dabf" target="_blank" class="btn">▶ Играй в Blooket</a>
+  </div>
+
+
+</section>
+
+
+<section>
+  <h2>📊 Презентации</h2>
+
+  <div class="task">
+    <h3>Презентации от Gamma</h3>
+    <a href="https://gamma.app/docs/Windows-Forms-6p7at450l7ewxx3" target="_blank" class="btn">Windows Forms</a>
+	<a href="https://gamma.app/docs/MVC-ASPNET-CRUD--oznt6nwtftfvh5r" target="_blank" class="btn">MVC,ASP.NET,CRUD</a>
+	<a href="https://gamma.app/docs/-hnvwi0dj0wpgjnp" target="_blank" class="btn">Видове тестване</a>
+	<a href="https://gamma.app/docs/NuGet--6jfet6pdvry9lr6" class="btn">Външни библиотеки</a>
+    
+   
+    
+  </div>
+
+  <div class="task">
+    <h3>Презентации от Microsoft Sway</h3>
+    
+    <!-- Вграждане -->
+    
+	
+	<div style="width:100%;height:600px; margin-top: 15px;">
+      <iframe width="760px" height="500px" src="https://sway.cloud.microsoft/s/ZMdtqUHDWToPgVJi/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>
+    
+	</div>
+	
+	<div style="width:100%;height:600px; margin-top: 15px;">
+      <iframe width="760px" height="500px" src="https://sway.cloud.microsoft/s/0ZrasuG1iZd2cxVK/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>
+    
+	</div>
+	
+	<div style="width:100%;height:600px; margin-top: 15px;">
+	<iframe width="760px" height="500px" src="https://sway.cloud.microsoft/s/iDiGoEMoL3mM76Eu/embed" frameborder="0" marginheight="0" marginwidth="0" max-width="100%" sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" scrolling="no" style="border: none; max-width: 100%; max-height: 100vh" allowfullscreen mozallowfullscreen msallowfullscreen webkitallowfullscreen></iframe>
+	</div>
+  </div>
+</section>
+
+
+<!-- Модал -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Описание на задачата</h3>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+
+<footer style="background-color:#261e63; color:white; padding:2rem; text-align:center;">
+  <p><strong>Автор:</strong> Илияна Гюрова – преподавател по Разработка на софтуер</p>
+ <br> <p>Свържи се с мен: <a href="mailto:iliyana@example.com" style="color:#ffd700;">ilianagyurova29@gmail.com</a></p>
+  
+ 
+
+</footer>
+
+
+<script>
+  function showDescription(text) {
+    document.getElementById("modalText").innerText = text;
+    document.getElementById("modal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  window.onclick = function(e) {
+    if (e.target === document.getElementById("modal")) {
+      closeModal();
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Образователна платформа – Разработка на софтуер</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-image: url('https://plus.unsplash.com/premium_photo-1661964187664-e26f70e1a224?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.90)),
+                  url('https://plus.unsplash.com/premium_photo-1661964187664-e26f70e1a224?fm=jpg&q=60&w=3000') no-repeat center/cover fixed;
       color: #222;
     }
-
     header {
       background-color: rgba(55, 47, 141, 0.9);
       color: white;
@@ -24,77 +24,86 @@
       text-align: center;
       position: relative;
     }
-
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 120px;
+    }
     nav {
       display: flex;
       justify-content: center;
       background-color: #261e63;
     }
-
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
     }
-
     nav li {
       position: relative;
     }
-
     nav a {
       display: block;
       padding: 1rem;
       color: white;
       text-decoration: none;
     }
-
     nav li:hover ul {
       display: block;
     }
-
     nav ul ul {
       display: none;
       position: absolute;
       background-color: #3b328a;
     }
-
     nav ul ul li {
-      width: 200px;
+      width: 180px;
     }
-
     section {
-      padding: 3rem;
-      margin: 2.5rem;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+  padding: 3rem;
+  margin: 2.5rem;
+  background: rgba(255, 255, 255, 0.6); /* по-слабо бяло */
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12); /* малко по-силен контраст */
+}
 
-     h2, h3 {
-      color: #1a237e;
+    h1 {
+      color: white;
     }
-	h1{
-	color: white;
-	}
-	
-	h2{
-	font-size:33px;
-	}
-    .gallery {
+    h2, h3 {
+      color: #1a237e;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .alt {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
+      gap: 2rem;
+      align-items: center;
     }
-
-    .gallery img {
-      width: 300px;
-	  height: 260px;
+    .alt:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .alt img {
+      width: 31%;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
-
+    .alt .text {
+      flex: 1;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
     footer {
       background-color: #372f8d;
       color: white;
@@ -102,119 +111,186 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-
-    .logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 120px;
+    ul li {
+      margin: 0.5rem 0;
+    }
+    iframe {
+      max-width: 100%;
     }
 	
-	.snimka{
-	width: 29%;
-	}
+	 .section-title {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .video-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .video-container {
+      border: 5px solid #007BFF;
+      padding: 5px;
+      border-radius: 6px;
+      background: white;
+      width: 500px; /* Фиксирана ширина */
+      flex-shrink: 0; /* Забранява свиване */
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="img/12.png" alt="Лого" class="logo">
-    <h1>Портал за кодиране и програмиране по Разработка на софт-уер</h1>
+    <h1>Портал за кодиране и програмиране по Разработка на софтуер</h1> <br>
     <p>Образователна платформа за 11. клас</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="#">Начало</a></li>
-      <li><a href="#">Учебни материали</a>
+      <li><a href="1.html">Начало</a></li>
+      <li><a href="UMateriali.html">Учебни материали</a>
         <ul>
-          <li><a href="#">Контролни</a></li>
-          
+          <li><a href="kontrolni.html">Контролни</a></li>
         </ul>
       </li>
-      <li><a href="#">Практически задачи</a>
-        <ul>
-         
-        </ul>
-      </li>
-      <li><a href="#">Контакти</a></li>
+      <li><a href="Pzadachi.html">Практически задачи</a></li>
+      <li><a href="contact.html">Контакти</a></li>
     </ul>
   </nav>
 
- <section>
-   <center> <h2>Образователна платформа за 11. клас – Разработка на софтуер</h2></center>
-   <center> <p>Научи програмиране по системно програмиране с лесни уроци, примери и задачи!</p></center>
- <center> <img src="img/robo.webp"  class="snimka"> </center>
+  <section class="alt" data-aos="fade-up">
+    <img src="img/robo.webp" alt="Роботика">
+    <div class="text">
+    <center>  <h2>Образователна платформа за 11. клас</h2> </center>
+      <center><p>Научи програмиране с лесни уроци, примери и задачи!</p> </center>
+    </div>
   </section>
 
-  <section>
-   <center> <h2>Какво е Разработка на софтуер?</h2> </center>
-    <p>Този предмет е въведение в принципите на софтуерната разработка, обхващащ трислойния модел, тестване, рефакториране, работа с пакетни мениджъри, бази данни и потребителски интерфейс. Учениците ще могат да използват Windows Forms за създаване на потребителски интерфейси. Сами ще разработват и структурират софтуерни проекти. Ще рефакторират код за по-добра четимост и ефективност. Ще пишат и изпълняват тестове за своите приложения.</p>
+  <section class="alt" data-aos="fade-up">
+    <img src="img/22.jpg" alt="Описание">
+    <div class="text">
+      <h2>Какво е Разработка на софтуер?</h2>
+      <p>Този предмет е въведение в принципите на софтуерната разработка, обхващащ трислойния модел, тестване, рефакториране, работа с пакетни мениджъри, бази данни и потребителски интерфейс. Учениците ще могат да използват Windows Forms за създаване на потребителски интерфейси. <br> Сами ще разработват и структурират софтуерни проекти. Ще рефакторират код за по-добра четимост и ефективност. Ще пишат и изпълняват тестове за своите приложения.</p>
+    </div>
   </section>
 
-  <section>
-   <center> <h2>Галерия</h2> </center>
+  <section data-aos="fade-up">
+    <h2>Галерия</h2>
+	<h5>  Работа в час </h5> </br>
     <div class="gallery">
       <img src="img/11.jpg" alt="Работа в час">
       <img src="img/111.jpg" alt="Ученици програмират">
       <img src="img/1111.jpg" alt="Проект на ученик">
-	  <img src="img/1111.jpg" alt="Проект на ученик">
+      <img src="img/222.jpg" alt="Проект на ученик">
     </div>
   </section>
 
-  <section>
-   <center> <h2>Какво ще научиш?</h2> </center>
+  <section data-aos="fade-up">
+    <h2>Какво ще научиш?</h2>
     <ul>
       <li>Трислойния модел</li>
       <li>Рефакториране на код</li>
       <li>Пакетни мениджъри</li>
-      <li>Свързване на приложение с бази данни</li>
-      <li>Създаване на потребителски интерфейс</li>
-      <li>Дизайн и интерфейс на приложение</li>
-      <li>Писане на компонентни тестове</li>
+      <li>Бази данни</li>
+      <li>Потребителски интерфейс</li>
+      <li>Компонентни тестове</li>
     </ul>
-  </section> 
-
-  <section>
-   <center> <h2>За мен</h2> </center>
-    <img src="img/.jpg" alt="Илияна Гюрова" width="200" style="border-radius: 10px;">
-    <p>Здравейте, Казвам се Илияна Гюрова и съм действащ учител вече година и половина. Преподавам специални предмети по професия „Системен програмист“ на 11. и 12. клас в СУ „Ал. Иванов – Чапай“. <br> Никога не съм вярвала, че професията „учител“ може да бъде една от най-трудните, но с времето разбрах, че тя е и една от най-ценните. Преодолях много предизвикателства, откакто станах учител, но научих едно – децата са най-голямото богатство. Всеки ден те ме вдъхновяват, изненадват и мотивират да давам най-доброто от себе си. <br> Освен преподаването, водя и свой клуб „Занимания по интереси“, в който учениците не само програмират, но и работят със вградени системи, сглобяват автоматизирани колички и развиват умения, които ще им помогнат в бъдещата им кариера.<br> За мен преподаването не е просто работа – това е кауза, която изгражда бъдещето!</p>
   </section>
 
-  <section>
-  <center>  <h2>Първият ми открит урок</h2> </center>
-  <center><p> На тема: Реализиране на фронт-енд за уеб сайт с 12.клас</p> </center>
+  <section class="alt" data-aos="fade-up">
+    <img src="img/teacher.png" alt="Илияна Гюрова">
+    <div class="text">
+      <h2>За мен</h2>
+      <p>Здравейте, Казвам се Илияна Гюрова и съм действащ учител вече година и половина. Преподавам специални предмети по професия „Системен програмист“ на 11. и 12. клас в СУ „Ал. Иванов – Чапай“. Никога не съм вярвала, че професията „учител“ може да бъде една от най-трудните, но с времето разбрах, че тя е и една от най-ценните. Преодолях много предизвикателства, откакто станах учител, но научих едно – децата са най-голямото богатство. Всеки ден те ме вдъхновяват, изненадват и мотивират да давам най-доброто от себе си. Освен преподаването, водя и свой клуб по проект „Занимания по интереси“, в който учениците не само програмират, но и работят със вградени системи, сглобяват автоматизирани колички и развиват умения, които ще им помогнат в бъдещата им кариера. За мен преподаването не е просто работа – това е кауза, която изгражда бъдещето!</p>
+    </div>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Първият ми открит урок</h2> 
+    <p>На тема: Реализиране на фронт-енд за уеб сайт с 12.клас</p><br>
     <div class="gallery">
       <img src="img/ot2.jpg" alt="Открит урок 1">
       <img src="img/ot1.jpg" alt="Открит урок 2">
-	  <img src="img/ot3.jpg" alt="Открит урок 3">
-	  <img src="img/ot4.jpg" alt="Открит урок 4">
+      <img src="img/ot3.jpg" alt="Открит урок 3">
+      <img src="img/ot4.jpg" alt="Открит урок 4">
     </div>
   </section>
 
-  <center><section>
-    <h2>СУ "Александър Иванов-Чапай"</h2>
+  <center><section data-aos="fade-up">
+    <h2>Средно училище "Александър Иванов-Чапай", гр. Белово</h2>
+   <p>Патрон: Александър Пипонков (Чапай)</p> <br>
     <img src="img/su.jpg" alt="СУ Ал. Иванов – Чапай" width="300">
-    <p>Патрон: Александър Иванов – Чапай</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/4SMydw38q7Q?si=uvN28GthqO0Jm9N8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      
-    </video>
+	<h3> Видеовизитка на училището </h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4SMydw38q7Q" title="YouTube video" allowfullscreen></iframe>
   </section> </center>
 
- <center> <section>
-    <h2>Проекти на ученици</h2>
+  <section data-aos="fade-up">
+    <h2>Проекти на мои ученици</h2>
     <div class="gallery">
-      <img src="project1.jpg" alt="Проект 1">
-      <img src="project2.jpg" alt="Проект 2">
+      <img src="img/Picture1.png" alt="Проект 1">
+      <img src="img/Picture2.png" alt="Проект 2">
+	  <img src="img/Picture3.png" alt="Проект 2">
+	  <img src="img/Picture4.png" alt="Проект 2"> 
+	  <img src="img/Picture5.png" alt="Проект 2">
+	  <img src="img/Picture6.png" alt="Проект 2">
+	  <img src="img/Picture7.png" alt="Проект 2">
+	  <img src="img/Picture8.png" alt="Проект 2">
+	  <img src="img/Picture9.png" alt="Проект 2">
+	  <img src="img/proekt3.jpg" alt="Проект 2">
     </div>
+  </section>
+  
+  
+  <center><section data-aos="fade-up">
+  <h1 class="section-title">Дипломни проекти на мои ученици</h1> <br>
+   <div class="video-container">
+      <video controls>
+        <source src="img/proekt2.mp4" type="video/mp4">
+       
+      </video>
+    </div>
+	<br>
+    <div class="video-container">
+      <video controls>
+        <source src="img/proekt4.mp4" type="video/mp4">
+        
+      </video>
+    </div>
+  
+ 
+ </section> </center>
+  <center><section data-aos="fade-up">
+    <h2>Прочети моята книга тук:</h2>
+    <a href="https://read.bookcreator.com/cJlZz8WhXGguYhNy0mLBIdQmXyC2/CegcZiQ2TJOM3zUc_nATHg" target="_blank">Виж тук!</a>
+	<br><img src="img/Book.gif" >
+	<img src="img/Book1.gif" >
   </section> </center>
 
-  <section>
-    <h2>Прочети моята книга тук:</h2>
-    <a href="https://read.bookcreator.com/cJlZz8WhXGguYhNy0mLBIdQmXyC2/CegcZiQ2TJOM3zUc_nATHg" target="_blank">Изтегли книгата (PDF)</a>
-  </section>
+ <footer style="background-color:#261e63; color:white; padding:2rem; text-align:center;">
+  <p><strong>Автор:</strong> Илияна Гюрова – преподавател по разработка на софтуер</p>
+ <br> <p>Свържи се с мен: <a href="mailto:iliyana@example.com" style="color:#ffd700;">ilianagyurova29@gmail.com</a></p>
+  
+  
 
-  <footer>
-    Автор: Илияна Гюрова </p>
-  </footer>
+</footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
